@@ -1,0 +1,38 @@
+# API Keys and Configuration
+config.json
+*.key
+*.pem
+.env
+
+# Logs
+business_collector.log
+*.log
+
+# Generated Data Files
+business_data_*.csv
+business_data_*.json
+high_quality_leads_*.csv
+high_quality_leads_*.json
+single_scrape_*.json
+scraping_results_*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
