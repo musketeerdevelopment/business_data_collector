@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Data Collector - Lead Generation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏢 Business Data Collector</h1>
+            <p>Generate high-quality sales leads with our intelligent filtering system</p>
+        </header>
+
+        <div class="quiz-container">
+            <form id="leadForm">
+                <div class="section">
+                    <h2>🎯 Target Business Type</h2>
+                    <div class="form-group">
+                        <label for="businessType">What type of businesses are you targeting?</label>
+                        <select id="businessType" required>
+                            <option value="">Select business type...</option>
+                            <option value="plumber">Plumbing Services</option>
+                            <option value="electrician">Electrical Services</option>
+                            <option value="hvac">HVAC Contractors</option>
+                            <option value="roofer">Roofing Contractors</option>
+                            <option value="painter">Painting Services</option>
+                            <option value="landscaper">Landscaping Services</option>
+                            <option value="lawyer">Legal Services</option>
+                            <option value="accountant">Accounting Services</option>
+                            <option value="dentist">Dental Services</option>
+                            <option value="restaurant">Restaurants</option>
+                            <option value="retail">Retail Stores</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="construction">Construction Companies</option>
+                            <option value="custom">Custom (specify below)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="customBusinessType" style="display: none;">
+                        <label for="customType">Specify business type:</label>
+                        <input type="text" id="customType" placeholder="e.g., marketing agencies, real estate">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>📍 Target Locations</h2>
+                    <div class="form-group">
+                        <label for="locations">Enter target cities/states (one per line):</label>
+                        <textarea id="locations" rows="4" placeholder="Buffalo, NY&#10;Rochester, NY&#10;Syracuse, NY" required></textarea>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>💰 Quality Filters</h2>
+                    <div class="form-group">
+                        <label for="minRating">Minimum Google Rating:</label>
+                        <select id="minRating">
+                            <option value="0">Any rating</option>
+                            <option value="3.5">3.5+ stars</option>
+                            <option value="4.0" selected>4.0+ stars</option>
+                            <option value="4.5">4.5+ stars</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="minReviews">Minimum number of reviews:</label>
+                        <select id="minReviews">
+                            <option value="0">Any number</option>
+                            <option value="5">5+ reviews</option>
+                            <option value="10" selected>10+ reviews</option>
+                            <option value="25">25+ reviews</option>
+                            <option value="50">50+ reviews</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hasWebsite">Website requirement:</label>
+                        <select id="hasWebsite">
+                            <option value="any">Any business</option>
+                            <option value="has_website" selected>Must have website</option>
+                            <option value="no_website">No website (potential clients)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>📊 Business Size & Revenue Indicators</h2>
+                    <div class="form-group">
+                        <label for="businessStatus">Business Status:</label>
+                        <select id="businessStatus">
+                            <option value="any">Any status</option>
+                            <option value="OPERATIONAL" selected>Operational only</option>
+                            <option value="CLOSED_TEMPORARILY">Temporarily closed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="priceLevel">Price Level (indicates business size):</label>
+                        <select id="priceLevel">
+                            <option value="any">Any price level</option>
+                            <option value="2">$$ (Mid-market)</option>
+                            <option value="3" selected>$$$ (Established businesses)</option>
+                            <option value="4">$$$$ (High-end/Large companies)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🎯 Lead Quality Preferences</h2>
+                    <div class="form-group">
+                        <label for="maxResults">Maximum results to collect:</label>
+                        <select id="maxResults">
+                            <option value="10">10 businesses</option>
+                            <option value="25" selected>25 businesses</option>
+                            <option value="50">50 businesses</option>
+                            <option value="100">100 businesses</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="searchRadius">Search radius (miles):</label>
+                        <select id="searchRadius">
+                            <option value="5">5 miles</option>
+                            <option value="10" selected>10 miles</option>
+                            <option value="25">25 miles</option>
+                            <option value="50">50 miles</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">🚀 Generate High-Quality Leads</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="results" class="results-container" style="display: none;">
+            <h2>📊 Lead Generation Results</h2>
+            <div id="progress" class="progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p id="progressText">Initializing...</p>
+            </div>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

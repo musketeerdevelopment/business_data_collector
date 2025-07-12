@@ -119,3 +119,61 @@ git pull origin main
 ## 📝 License
 
 Personal use only. Not for commercial distribution.
+
+## 🌐 Web Interface
+
+This repository includes an interactive web interface for lead generation:
+
+### Access the Web Interface
+Once GitHub Pages is enabled, you can access the interactive lead generation tool at:
+`https://musketeerdevelopment.github.io/business_data_collector/`
+
+### Features
+- **Interactive Quiz**: Answer questions about your target businesses
+- **Quality Filters**: Filter by rating, reviews, website presence, and more
+- **Revenue Indicators**: Target businesses by price level and status
+- **Instant Results**: Get high-quality leads immediately
+- **CSV/JSON Download**: Export results for your sales process
+
+### Web Interface Parameters
+- **Business Type**: Plumbing, electrical, HVAC, legal, accounting, etc.
+- **Locations**: Target specific cities and states
+- **Quality Filters**: Minimum rating, review count, website requirements
+- **Business Size**: Price level indicators for established companies
+- **Search Radius**: How far to search from target locations
+
+### How to Use the Web Interface
+1. Go to the GitHub Pages URL
+2. Fill out the interactive quiz
+3. Submit to generate leads
+4. Download CSV or JSON files
+5. Use the data for your sales calls
+
+## 🚀 Quick Start with Web Interface
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Scroll to "Pages" section
+   - Select "GitHub Actions" as source
+   - The web interface will deploy automatically
+
+2. **Configure API Key**:
+   - Add your Google API key to `config.json`
+   - The web interface will use this for real data
+
+3. **Access the Tool**:
+   - Visit your GitHub Pages URL
+   - Start generating high-quality leads!
+
+## 📊 Quality Scoring System
+
+The web interface uses an intelligent scoring system to identify the best prospects:
+
+- **Rating Bonus**: 4.5+ stars = +2 points, 4.0+ stars = +1 point
+- **Review Count**: 50+ reviews = +2 points, 25+ reviews = +1 point  
+- **Website Presence**: Has website = +1 point
+- **Price Level**: Higher price levels = more established businesses
+- **Business Status**: Operational businesses = +1 point
+
+**Total Quality Score**: 0-10 scale, with 8+ being premium prospects.
+
